@@ -4,6 +4,10 @@
         "iostream": "cpp",
         "fstream": "cpp",
         "ostream": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "string": "c",
+        "stdio.h": "c",
+        "string.h": "c",
+        "stdlib.h": "c"
     }
 }
