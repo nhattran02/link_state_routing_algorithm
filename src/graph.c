@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <Python.h>
 #include <numpy/arrayobject.h>
-#include "graph.h"
+#include "../inc/graph.h"
+
 
 /**
  * A function that calls the drawGraph function from the DrawGraph Python module.

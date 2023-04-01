@@ -3,8 +3,8 @@
 #include <string.h>
 #include <Python.h>
 #include <numpy/arrayobject.h>
-#include "matrix.h"
-#include "graph.h"
+#include "../inc/matrix.h"
+#include "../inc/graph.h"
 
 int main(int argc, char const *argv[])
 {

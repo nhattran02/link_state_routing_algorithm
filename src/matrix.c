@@ -3,7 +3,8 @@
 #include <string.h>
 #include <Python.h>
 #include <numpy/arrayobject.h>
-#include "matrix.h"
+#include "../inc/matrix.h"
+
 // #include "graph.h"
 
 /**
