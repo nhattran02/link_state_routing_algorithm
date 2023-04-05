@@ -7,7 +7,7 @@ This program has written by using C & Python.h
 
 Input is a adjacency matrix. The adjacency matrix for undirected graphs is **always symmetric** and **Identity**
 
-Adjacency atrix is a 2D array of size V x V where V is the number of vertices in a graph. Let the 2D array be matrix[][], a slot matrix[i][j] not equal to 0 indicates the weight of the edge from vertex i to vertex j, otherwise, matrix[i][j] = 0, do not have any edge from vertex i to vertex j
+Adjacency atrix is a 2D array of size V x V where V is the number of vertices in a graph. Let the 2D array be matrix[ ][ ], a slot matrix[ i ][ j ] not equal to 0 indicates the weight of the edge from vertex i to vertex j, otherwise, matrix[ i ][ j ] = 0, do not have any edge from vertex i to vertex j
 
 For example:
 
@@ -44,13 +44,9 @@ Build in window:
 
     gcc src/*.c -o build/output -I C:Python310\include -L C:Python310\libs -lpython310
 
-Run output object in Linux:
+Run output object in Linux/Window:
 
     ./build/output
-
-Run output object in Window:
-
-    output.exe
 
 
 ### Build using Makefile
