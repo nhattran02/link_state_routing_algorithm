@@ -28,8 +28,8 @@ def drawGraph(pyMatrix):
     nx.draw(G, pos, with_labels=True, node_color = 'red', node_size = 800)
     labels = nx.get_edge_attributes(G, "weight")
     nx.draw_networkx_edge_labels(G, pos, edge_labels=labels, font_color='blue', font_size=15)
-    plt.show()
-    # plt.savefig('build/graph_out.png')
+    # plt.show()
+    plt.savefig('build/graph_out.png')
 
 
 

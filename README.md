@@ -19,16 +19,13 @@ For example:
 Graph of the above matrix:
 ![](image/graph1.png)
 
-    9
-    0 7 1 2 2 8 7 1 1
-    7 0 9 8 5 6 0 9 2
-    1 9 0 4 1 3 4 8 9
-    2 8 4 0 2 2 4 4 6
-    2 5 1 2 0 7 4 8 9
-    8 6 3 2 7 0 2 0 0
-    7 0 4 4 4 2 0 2 4
-    1 9 8 4 8 0 2 0 8
-    1 2 9 6 9 0 4 8 0
+    5 
+    0 7 7 3 2 
+    7 0 3 4 0 
+    7 3 0 1 1 
+    3 4 1 0 2 
+    2 0 1 2 0 
+
 
 Graph of the above matrix:
 ![](image/graph2.png)
