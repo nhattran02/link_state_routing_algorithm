@@ -66,6 +66,25 @@ void displayForwardingTable(int *distance, int *parent, int n, int src)
     }
 }
 
+void displayShortestPathTable(int *distance, int *parent, int n, int src)
+{
+    int parent_node;
+    printf("\n\t ---------------------------------------------------- ");
+    printf("\n\t |\t  THE SHORTEST PATH TABLE FOR THE NODE %c  \t    |", src + 'A');
+    printf("\n\t ---------------------------------------------------- ");
+    printf("\n\t Destination \t\tDistance \t\tPath");
+    for(int i = 0; i < n; i++){
+        printf("\n\t     %c \t\t\t   %d \t\t\t", i + 'A', distance[i]);
+        printf("%c ", i + 'A');
+        parent_node = parent[i];
+        while (parent_node != src){
+        printf("<- %c ", parent_node + 'A');
+            parent_node = parent[parent_node];
+        }
+        printf("<- %c \n", src + 'A');
+    }
+}
+
 void displayShortestPath(int *distance, int *parent, int n, int src, int des)
 {
     printf("\n\t The shortest path from node %c to node %c:\n", src + 'A', des + 'A');
