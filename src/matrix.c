@@ -17,11 +17,19 @@
 int** readMatrixFromFile(int *size)
 {
     char filename[256];
-    printf("Enter filename: ");
-    scanf("%s", filename);
-    char path[256] = "testfile/";
-    strcat(path, filename);
-    FILE *infile = fopen(path, "r");
+    FILE *infile ;
+
+    do{
+        printf("\n\t Please enter filename of adjacency matrix: ");
+        scanf("%s", filename);
+        char path[256] = "testfile/";
+        strcat(path, filename);
+        infile = fopen(path, "r");
+        if(infile == NULL){
+            printf("%s%s%s", "\x1b[31;1m", "\t Enter matrix failed. Check again!", "\x1b[39;49m");
+        }
+    }while(infile == NULL);
+
     fscanf(infile, "%d", size);
     int** matrix = (int **) malloc((*size) * sizeof(int *));
     for(int i = 0; i < (*size); ++i) {
@@ -31,6 +39,7 @@ int** readMatrixFromFile(int *size)
         }
     }
     fclose(infile);
+    printf("%s%s%s", "\x1b[32;1m", "\t Enter matrix successfully!", "\x1b[39;49m");
     return matrix;
 }
 
@@ -64,7 +73,7 @@ PyObject *convertcppMatrix2pyMatrix(int **cppMatrix, int size)
     import_array();
     PyObject *pyArray = PyArray_SimpleNew(2, dims, NPY_INT);
     if(pyArray == NULL){
-        printf("Error: failed to allocate memory for NumPy array\n");
+        printf("%s%s%s", "\x1b[31;1m", "\t Error: failed to allocate memory for NumPy array", "\x1b[39;49m");
         return NULL;
     }
     // Copy the data from the input array to the NumPy array
@@ -77,4 +86,25 @@ PyObject *convertcppMatrix2pyMatrix(int **cppMatrix, int size)
 
     // Return the NumPy array
     return pyArray;
+}
+
+/**
+ * Print all elements of matrix 
+ * 
+ * @param matrix The matrix to be freed.
+ * @param size The size of the matrix.
+ * @return None
+ */
+void printMatrix(int **matrix, int size)
+{
+    printf("\n\t ------------------------------------- ");
+    printf("\n\t |    DISPLAY THE ADJACENCY MATRIX   | ");
+    printf("\n\t ------------------------------------- ");
+    printf("\n\t");
+    for(int i = 0; i < size ; i++){
+        for(int j = 0; j < size ; j++){
+            printf("%5d", matrix[i][j]);
+        }
+        printf("\n\t");
+    }
 }

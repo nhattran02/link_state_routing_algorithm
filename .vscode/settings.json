@@ -8,6 +8,16 @@
         "string": "c",
         "stdio.h": "c",
         "string.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "termios.h": "c",
+        "cstring": "c",
+        "dijkstra.h": "c",
+        "random": "c",
+        "limits": "c",
+        "iterator": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "utility": "c"
     }
 }
