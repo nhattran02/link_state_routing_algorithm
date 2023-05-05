@@ -13,9 +13,7 @@
 int main(int argc, char const *argv[])
 {
     int **cppMatrix;
-    int **outMatrix;
     int size;
-    int menuSelected = 0;
     char *inputMenuKey = malloc(sizeof(char) * 3);
 
     int src;
@@ -27,17 +25,16 @@ int main(int argc, char const *argv[])
     printf("%s%s%s", "\x1b[36;1m", "\n\t LINK STATE ROUTING ALGORITHM\n", "\x1b[39;49m");
     cppMatrix = readMatrixFromFile(&size);
 
-    while (menuSelected != 5){
+    while (atoi(inputMenuKey) != 5){
 
         printf("%s%s%s","\x1b[36;1m","\n\t (1) Generate a graph visualization from the input matrix\
-                        \n\t (2) Display the forwarding table            \
+                        \n\t (2) Display the forwarding table           \
                         \n\t (3) Shortest path to destination router    \
                         \n\t (4) Modify the Network Topology            \
                         \n\t (5) Exit                                   \
                         \n\n\t Command: ","\x1b[39;49m");  
         scanf("%s", inputMenuKey);
-        menuSelected = atoi(inputMenuKey);
-        switch (menuSelected){
+        switch (atoi(inputMenuKey)){
         case 1:
             printMatrix(cppMatrix, size);
             // Initialize Python interpreter
@@ -98,9 +95,6 @@ int main(int argc, char const *argv[])
 
             dijkstra(cppMatrix, size, src, distance, parent);
             displayShortestPath(distance, parent, size, src, des);
-
-
-            
             break;
         case 4:
             while(1);

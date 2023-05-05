@@ -19,12 +19,15 @@ For example:
 Graph of the above matrix:
 ![](image/graph1.png)
 
-    5 
-    0 7 7 3 2 
-    7 0 3 4 0 
-    7 3 0 1 1 
-    3 4 1 0 2 
-    2 0 1 2 0 
+    7
+     0 7-1  5 -1 -1 -1
+     7 0 8  9  7 -1 -1
+    -1 8 0 -1  5 -1 -1
+     5 9-1  0 15  6 -1
+    -1 7 5 15  0  8  9
+    -1-1-1  6  8  0 11
+    -1-1-1 -1  9 11  0
+
 
 
 Graph of the above matrix:

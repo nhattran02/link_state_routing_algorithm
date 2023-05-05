@@ -49,6 +49,7 @@ void displayForwardingTable(int *distance, int *parent, int n, int src)
     printf("\n\t ------------------------------------- ");
     printf("\n\t Destination \t\t\t Link");
     for(int i = 0; i < n; i++){
+        flag = 0;
         printf("\n\t     %c\t\t\t", i + 'A');
         parent_node = parent[i];
         while (parent_node != src){
